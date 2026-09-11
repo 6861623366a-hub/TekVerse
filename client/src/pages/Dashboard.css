@@ -1,0 +1,164 @@
+.dashboard {
+  display: flex;
+  height: 100vh;
+  background: #1a1a1a;
+  overflow: hidden;
+}
+
+.dashboard-content {
+  display: flex;
+  flex: 1;
+  gap: 0;
+}
+
+.channel-area {
+  display: flex;
+  flex: 1;
+}
+
+.loading-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+}
+
+.loading-content {
+  text-align: center;
+}
+
+.loading-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.welcome-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  background: #1f1f1f;
+}
+
+.welcome-content {
+  text-align: center;
+}
+
+.welcome-icon {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+.welcome-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.welcome-subtitle {
+  color: #999;
+  margin-bottom: 2rem;
+}
+
+.welcome-button {
+  background: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%);
+  color: white;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.welcome-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 212, 255, 0.3);
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.modal-content {
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  max-width: 500px;
+  width: 90%;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00d4ff;
+  margin-bottom: 1.5rem;
+}
+
+.modal-input {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #3a3a3a;
+  border: 1px solid #555;
+  border-radius: 0.25rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.modal-input:focus {
+  outline: none;
+  border-color: #00d4ff;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.modal-button {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.modal-button.primary {
+  background-color: #00d4ff;
+  color: #1a1a1a;
+}
+
+.modal-button.primary:hover {
+  background-color: #00b8d4;
+}
+
+.modal-button.secondary {
+  background-color: #555;
+  color: white;
+}
+
+.modal-button.secondary:hover {
+  background-color: #666;
+}
